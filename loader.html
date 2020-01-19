@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rebbit</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- the spinny css -->
+    <style>
+        body {
+            padding: 50px; 
+        }
+        #loader {
+            width: 500px;
+            height: 500px;
+            background-image: url(../art_assets/logo_small.png);
+            animation-name: spin;
+            animation-duration: 2500ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; 
+            /* transform: rotate(3deg); */
+            /* transform: rotate(0.3rad);/ */
+            /* transform: rotate(3grad); */ 
+            /* transform: rotate(.03turn);  */
+        }
+
+        @keyframes spin {
+            from {
+                transform:rotate(0deg);
+            }
+            to {
+                transform:rotate(360deg);
+            }
+        }
+    </style>
+
+    <!-- JS script to check loading -->
+    <script>
+        var myVar;
+        
+        function myFunction() {
+            myVar = setTimeout(showPage, 3000);
+        }
+        
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("page-contents").style.display = "block";
+        }
+    </script>
+
+</head>
+<body body onload="myFunction()" style="margin:0;">
+
+    <div id="loader">
+    </div>
+
+    <div id="page-contents" style="display:none;">
+        <header>
+            <h1>Test Page</h1>
+            <p>I made this at 4 am</p>
+            <nav></nav>
+        </header>
+    </div>
+    
+</body>
+</html>
