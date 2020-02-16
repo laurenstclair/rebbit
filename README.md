@@ -6,5 +6,5 @@ Rebbit is a Canadian social news collection, content rating, and discussion webs
 
 ## Creators
 + [Lauren St.Clair](https://github.com/laurenstclair)
-+ [Kathryn Lecha] (https://github.com/kzlecha)
++ [Kathryn Lecha](https://github.com/kzlecha)
 
