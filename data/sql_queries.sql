@@ -26,5 +26,8 @@ FROM comment_id
 WHERE post_id = ?;
 
 -- TODO: Comments on comments
-
+SELECT comment_id
+FROM comment_id
+WHERE post_id = ?
+    AND parent_comment_id == ?;
 
