@@ -75,7 +75,8 @@
 
   table.table_stats{
     width: 80%;
-    padding: 5%;
+    padding: 5%;border:1px solid #50504e;
+    border:1px solid #50504e;
     border-collapse: collapse;
   }
 
@@ -84,9 +85,13 @@
     border:1px solid #50504e;
     
   }
+  table.table_stats th{
+    background-color: #5b767c;
+  }
 
-
-  
+  div.flex_post > h2{
+    color: #5b767c;
+  }
   
 </style>
 
@@ -94,8 +99,8 @@
 <body>
   <!-- NAVIGATION BAR-->
   <nav style="background-color: #f1f0f0" class="navbar navbar-expand-lg navbar-light " >
-    <a class="navbar-brand" href="#">
-      <img src="images/graphics/rebbit.png" width="115" height="30" alt="rebbit" href="index.html">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/graphics/rebbit.png" width="115" height="30" alt="rebbit">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -144,12 +149,11 @@
       <!-- usage -->
       <div class = "col-sm-12 cite_stats" style="background-color: #e7e4e4; padding: 1em; border-radius: 25px; ">
         <!-- users -->
-        <div class = "post">
+        <div class = "flex_post">
+          <h2 style="width: 100%;">Growth by Day </h2>
           <table class = "table_stats">
-            <thead>
-              <caption>Growth by day (Users)</caption>
-            </thead>
             <tbody>
+              <!-- <h3>Growth in Number of Users</h3> -->
               <tr>
                 <th>Date</th>
                 <th>Number of New Users</th>
@@ -158,6 +162,7 @@
                 <td>r/cuteFrogs</td>
                 <td>10</td>
               </tr>
+              <!-- <h3>Growth in Number of Knots</h3> -->
               <tr>
                 <th>Date</th>
                 <th>Number of New Knots</th>
@@ -171,9 +176,10 @@
         </div>
 
         <!-- Most popular subs -->
-        <div class = "post">
-          <table>
-            <caption>Most Popular Knots</caption>
+        <div class = "flex_post">
+          <h2 style="width: 100%;">Most Popular Knots</h2><br>
+          <table class = "table_stats">
+            <!-- <h3>Popularity by Number of Posts</h3> -->
             <tbody>
               <tr>
                 <th>Knot</th>
@@ -183,6 +189,7 @@
                 <td>r/cuteFrogs</td>
                 <td>10</td>
               </tr>
+              <!-- <tr><h3>Popularity by Number of Followers</h3></tr> -->
               <tr>
                 <th>Knot</th>
                 <th>Number of Followers</th>
