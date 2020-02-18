@@ -52,6 +52,14 @@ CREATE TABLE FollowingKnot(
     foreign key(knot_id) references Knot(knot_id) ON DELETE CASCADE
 );
 
+CREATE TABLE BannedFromKnot(
+    user_id int not null,
+    knot_id int not null,
+    primary key(user_id, knot_id),
+    foreign key(user_id) references User(user_id) ON DELETE CASCADE,
+    foreign key(knot_id) references Knot(knot_id) ON DELETE CASCADE
+);
+
 CREATE TABLE Post(
     post_id int not null auto_increment,
     user_id int not null,
