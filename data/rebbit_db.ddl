@@ -4,8 +4,8 @@
 
 CREATE TABLE User(
     user_id int not null auto_increment,
-    user_name VARCHAR(32),
-    password VARCHAR(256),
+    user_name VARCHAR(32) UNIQUE not null,
+    password VARCHAR(256) not null,
     email VARCHAR(256),
     create_date DATE DEFAULT NOW(),
     delete_date DATE,
@@ -94,9 +94,10 @@ CREATE TABLE CommentVote(
 
 -- Users
 INSERT INTO User(user_name, password, email) VALUES ('unded_turtle', MD5('ilovefrogs'), 'kzlecha@gmail.com');
+INSERT INTO User(user_name, password, email) VALUES ('froglover97', MD5('ilovefrogs'), 'lauren.d.stclair@gmail.com');
 
 -- Site Admin
 INSERT INTO Admin VALUES(1);
--- INSERT INTO Admin VALUES(2);
+INSERT INTO Admin VALUES(2);
 
 
