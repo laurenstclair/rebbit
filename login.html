@@ -64,14 +64,16 @@
         </nav>
         
         <!--LOGIN FORM-->
-        <form method="GET" action="..." class="login">
+        <form method="POST" action="..." class="login">
             <div class="login_content">
                 <legend>Log in</legend>
                 <p><label>Username</label>
-                    <input type="text" name=user></p>
-                    <p><label>Password</label>
-                        <input type="text" name=password></p>
-                        <input type="submit" value="Submit">
+                    <input type="text" name=user required minlength="8" maxlength="32">
+                </p>
+                <p><label>Password</label>
+                    <input type="password" name=password required>
+                </p>
+                    <input type="submit" value="Submit">
                     </div>
                 </form>
                 
