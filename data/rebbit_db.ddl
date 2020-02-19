@@ -7,6 +7,7 @@ CREATE TABLE User(
     user_name VARCHAR(32) UNIQUE not null,
     password VARCHAR(256) not null,
     email VARCHAR(256),
+    image_locaton VARCHAR(256),
     create_date DATE DEFAULT NOW(),
     delete_date DATE,
     primary key (user_id)
