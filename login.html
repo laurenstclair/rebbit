@@ -30,8 +30,8 @@
     <body style="margin: 0.25em; background-color: #f1f0f0;">
         <!-- NAVIGATION BAR-->
         <nav style="background-color: #f1f0f0" class="navbar navbar-expand-lg navbar-light " >
-            <a class="navbar-brand" href="#">
-                <img src="images/graphics/rebbit.png" width="115" height="30" alt="rebbit" href="index.html">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/graphics/rebbit.png" width="115" height="30" alt="rebbit">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -64,14 +64,16 @@
         </nav>
         
         <!--LOGIN FORM-->
-        <form method="GET" action="..." class="login">
+        <form method="POST" action="..." class="login">
             <div class="login_content">
                 <legend>Log in</legend>
                 <p><label>Username</label>
-                    <input type="text" name=user></p>
-                    <p><label>Password</label>
-                        <input type="text" name=password></p>
-                        <input type="submit" value="Submit">
+                    <input type="text" name=user required minlength="8" maxlength="32">
+                </p>
+                <p><label>Password</label>
+                    <input type="password" name=password required>
+                </p>
+                    <input type="submit" value="Submit">
                     </div>
                 </form>
                 
