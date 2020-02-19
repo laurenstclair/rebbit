@@ -18,9 +18,8 @@
     .flex_post{
         display: flex;
         flex-wrap: nowrap;
-        align-items: center;
+        align-items: flex-start;
         background-color: #f1f0f0;
-        flex-direction: row;
         overflow: auto;
         border-radius: 25px;
         margin-top: 8px;
@@ -31,10 +30,9 @@
         padding-bottom: 15px;
     }
     .post_info{
-        margin-top: 0.4em;
         padding: 10px;
-        flex-basis: 80%;
-        max-height: 200px;
+        max-height: 400px;
+        flex-basis: 400px;
     }
     .post_desc{
         color: #50504e;
@@ -46,6 +44,7 @@
     .post_title{
         color: #50504e;
         font-weight: 200;
+        display: inline;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
     .post_knot{
@@ -62,20 +61,29 @@
         color: #5b767c ;
     }
     .post_upvote{
-        min-width: 60px;
-        max-width: 80px;
-        flex-basis: 80px;
-        padding-top: 10px;
+        flex-basis: 60px;
+        min-width: 40px;
         margin: auto;
     }
+    
     .post_img{
         min-width: 80px;
         max-width: 200px;
         margin: auto;
     }
     .comment_button{
-    max-height: 30px;
-    padding-left: 100px;
+        max-height: 30px;
+        padding-left: 100px;
+    }
+    .post_upvote{
+        min-height: 30px;
+        max-width: 60px;
+        margin: auto;
+        padding: 10px;
+    }
+    .comment_button{
+        max-height: 30px;
+        padding-left: 50px;
     }
     
     h2{
@@ -89,6 +97,7 @@
     ::-webkit-scrollbar {
         width: 6px;
     }
+    
     
     /* Track */
     ::-webkit-scrollbar-track {
@@ -153,51 +162,39 @@
         <h2>/frog_kitchenware</h1>
             <div class="posts">
                 <div class="flex_post">
-                    <div class="col-sm-2 post_upvote">
-                        <img src="images/graphics/UpvoteDownvote.png" alt="..." class="img-responsive" >
-                    </div>
-                    <div class="col-sm-10">
+                    <!-- Post styling -->
+                    <div class="post">
                         <img src="images/frog_mug2.jpeg" alt="..." class="img-thumbnail post_img" >
-                        <p class="post_title">Frog Mug</p>
-                        <p class="post_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum dui faucibus in ornare quam viverra. Cursus mattis molestie a iaculis at erat pellentesque. Aliquet nibh praesent tristique magna sit amet purus gravida quis.</p>
-                        <p class="post_date">03-12-2020</p>
-                        <img src="./images/graphics/chat-icon.png" class="comment_button">
+                        <div class="post_info">
+                            <p class="post_title">Frog Mug</p>
+                            <img src="images/graphics/UpvoteDownvote.png" alt="..." class="post_upvote" >
+                            <p class="post_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum dui faucibus in ornare quam viverra. Cursus mattis molestie a iaculis at erat pellentesque. Aliquet nibh praesent tristique magna sit amet purus gravida quis.</p>
+                            <p class="post_date">03-12-2020</p>
+                            <img src="./images/graphics/chat-icon.png" class="comment_button">
+                        </div>
                     </div>
                 </div>
                 <div class="flex_post">
-                    <div class="col-sm-2 post_upvote">
-                        <img src="images/graphics/UpvoteDownvote.png" alt="..." class="img-responsive" >
-                    </div>
-                    <div class="col-sm-10">
+                    <div class="post">
                         <img src="images/frog_mug2.jpeg" alt="..." class="img-thumbnail post_img" >
-                        <p class="post_title">Frog Mug</p>
-                        <p class="post_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum dui faucibus in ornare quam viverra. Cursus mattis molestie a iaculis at erat pellentesque. Aliquet nibh praesent tristique magna sit amet purus gravida quis.</p>
-                        <p class="post_date">03-12-2020</p>
-                        <img src="./images/graphics/chat-icon.png" class="comment_button">
-                    </div>
-                </div>
-                <div class="flex_post">
-                    <div class="col-sm-2 post_upvote">
-                        <img src="images/graphics/UpvoteDownvote.png" alt="..." class="img-responsive" >
-                    </div>
-                    <div class="col-sm-10">
-                        <img src="images/frog_mug2.jpeg" alt="..." class="img-thumbnail post_img" >
-                        <p class="post_title">Frog Mug</p>
-                        <p class="post_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum dui faucibus in ornare quam viverra. Cursus mattis molestie a iaculis at erat pellentesque. Aliquet nibh praesent tristique magna sit amet purus gravida quis.</p>
-                        <p class="post_date">03-12-2020</p>
-                        <img src="./images/graphics/chat-icon.png" class="comment_button">
+                        <div class="post_info">
+                            <p class="post_title">Frog Mug</p>
+                            <img src="images/graphics/UpvoteDownvote.png" alt="..." class="post_upvote" >
+                            <p class="post_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum dui faucibus in ornare quam viverra. Cursus mattis molestie a iaculis at erat pellentesque. Aliquet nibh praesent tristique magna sit amet purus gravida quis.</p>
+                            <p class="post_date">03-12-2020</p>
+                            <img src="./images/graphics/chat-icon.png" class="comment_button">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            
+            
+            
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="./bootstrap/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        </body>
         
         
-        
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="./bootstrap/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    </body>
-    
-    
