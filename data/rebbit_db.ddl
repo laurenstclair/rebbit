@@ -3,9 +3,10 @@
 -- create tables
 CREATE TABLE User(
     user_id int not null auto_increment,
-    user_name VARCHAR(32),
-    password VARCHAR(256),
+    user_name VARCHAR(32) UNIQUE not null,
+    password VARCHAR(256) not null,
     email VARCHAR(256),
+    image_locaton VARCHAR(256),
     create_date DATE DEFAULT NOW(),
     delete_date DATE,
     primary key (user_id)

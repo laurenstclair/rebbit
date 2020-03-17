@@ -17,15 +17,24 @@
     }
     .flex_post{
         display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        align-items: center;
         background-color: #f1f0f0;
+        flex-direction: row;
+        overflow: auto;
         border-radius: 25px;
         margin-top: 8px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
     .post_info{
         margin-top: 0.4em;
         padding: 10px;
+        flex-basis: 80%;
+        max-height: 200px;
     }
     .post_desc{
         color: #50504e;
@@ -46,45 +55,65 @@
         margin-top: 2px;
         font-size: small;
     }
-    .post_img{
-        max-height: 200px;
-        display: inline;
-    }
     .post_date{
         font-family: 'Courier New', Courier, monospace;
         font-size: smaller;
+        display: inline;
         color: #5b767c ;
     }
-    .flex_post{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding-top: 10px;;
-    }
-    
-    .lillypad{
-        max-height: 80px;
+    .post_upvote{
+        min-width: 60px;
+        max-width: 80px;
+        flex-basis: 80px;
+        padding-top: 10px;
         margin: auto;
-        padding-right: 10px;
-        display: inline;
+    }
+    .post_img{
+        min-width: 80px;
+        max-width: 200px;
+        margin: auto;
+    }
+    .comment_button{
+    max-height: 30px;
+    padding-left: 100px;
     }
     
     h2{
         color:#5b767c;
         padding-top: 10px;
         padding-bottom: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    /* width */
+    ::-webkit-scrollbar {
+        width: 6px;
     }
     
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #d9eee3; 
+        border-radius: 10px;
+    }
     
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #a8d1ca; 
+        border-radius: 10px;
+    }
     
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #b8dbd5; 
+    }
 </style>
 
 <!--BODY-->
 <body>
     <!--NAVIGATION BAR-->
     <nav style="background-color: #d9eee3" class="navbar navbar-expand-lg navbar-light " >
-        <a class="navbar-brand" href="#">
-            <img src="images/graphics/rebbit.png" width="115" height="30" alt="rebbit" href="index.html">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/graphics/rebbit.png" width="115" height="30" alt="rebbit">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -122,30 +151,41 @@
     
     <div class="posts">
         <h2>/frog_kitchenware</h1>
-            
-            <div class="flex_post">
-                <div class="col-sm-4 post_img">
-                    <img src="images/graphics/UpvoteDownvote.png" alt="..." class="img-fluid lillypad" >
-                    <img src="images/frog_mug2.jpeg" alt="..." class="img-thumbnail post_img" >
-                </div>
-                <div class="col-sm-6">
-                    <div class="post_info">
+            <div class="posts">
+                <div class="flex_post">
+                    <div class="col-sm-2 post_upvote">
+                        <img src="images/graphics/UpvoteDownvote.png" alt="..." class="img-responsive" >
+                    </div>
+                    <div class="col-sm-10">
+                        <img src="images/frog_mug2.jpeg" alt="..." class="img-thumbnail post_img" >
                         <p class="post_title">Frog Mug</p>
                         <p class="post_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum dui faucibus in ornare quam viverra. Cursus mattis molestie a iaculis at erat pellentesque. Aliquet nibh praesent tristique magna sit amet purus gravida quis.</p>
                         <p class="post_date">03-12-2020</p>
+                        <img src="./images/graphics/chat-icon.png" class="comment_button">
                     </div>
                 </div>
-            </div>
-            <div class="flex_post">
-                <div class="col-sm-4">
-                    <img src="images/graphics/UpvoteDownvote.png" alt="..." class="img-fluid lillypad" >
-                    <img src="images/frog_mug2.jpeg" alt="..." class="img-thumbnail post_img" >
-                </div>
-                <div class="col-sm-6">
-                    <div class="post_info">
+                <div class="flex_post">
+                    <div class="col-sm-2 post_upvote">
+                        <img src="images/graphics/UpvoteDownvote.png" alt="..." class="img-responsive" >
+                    </div>
+                    <div class="col-sm-10">
+                        <img src="images/frog_mug2.jpeg" alt="..." class="img-thumbnail post_img" >
                         <p class="post_title">Frog Mug</p>
                         <p class="post_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum dui faucibus in ornare quam viverra. Cursus mattis molestie a iaculis at erat pellentesque. Aliquet nibh praesent tristique magna sit amet purus gravida quis.</p>
                         <p class="post_date">03-12-2020</p>
+                        <img src="./images/graphics/chat-icon.png" class="comment_button">
+                    </div>
+                </div>
+                <div class="flex_post">
+                    <div class="col-sm-2 post_upvote">
+                        <img src="images/graphics/UpvoteDownvote.png" alt="..." class="img-responsive" >
+                    </div>
+                    <div class="col-sm-10">
+                        <img src="images/frog_mug2.jpeg" alt="..." class="img-thumbnail post_img" >
+                        <p class="post_title">Frog Mug</p>
+                        <p class="post_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum dui faucibus in ornare quam viverra. Cursus mattis molestie a iaculis at erat pellentesque. Aliquet nibh praesent tristique magna sit amet purus gravida quis.</p>
+                        <p class="post_date">03-12-2020</p>
+                        <img src="./images/graphics/chat-icon.png" class="comment_button">
                     </div>
                 </div>
             </div>

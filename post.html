@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  
+  <title>Rebbit - Frogs 24/7</title>
+</head>
+<!-- Custom styling -->
+<style>
+  body{
+    background-color: #f1f0f0;
+    margin: 0.25em;
+  }
+  .top_desc{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .post{
+    max-width: 50%;
+    padding: 2.5%;
+    /* margin-right: 10px; */
+  }
+  .post_info{
+    margin-top: 0.4em;
+    padding: 10px;
+    border-bottom: dashed 0.8px #4f676c;
+  }
+  .post_desc{
+    color: #50504e;
+    font-size: medium;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    max-height: 150px;
+    overflow: hidden;
+  }
+  .post_title{
+    color: #50504e;
+    font-weight: 200;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .post_knot{
+    font-weight: 600;
+    color: #4f676c;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 2px;
+    font-size: small;
+  }
+  .post_date{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    color: #5b767c ;
+  }
+  .flex_post{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .lillypad{
+    max-height: 80px;
+    margin: auto;
+  }
+
+  .main_image{
+    max-height: 500px;
+  }
+
+  .reply{
+    font-size: smaller;
+    border: 0px;
+  }
+
+  
+  
+</style>
+
+<!-- BODY -->
+<body>
+  <!-- NAVIGATION BAR-->
+  <nav style="background-color: #f1f0f0" class="navbar navbar-expand-lg navbar-light " >
+    <a class="navbar-brand" href="index.html">
+      <img src="images/graphics/rebbit.png" width="115" height="30" alt="rebbit">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"> <!-- active indicates that this is our current page, to be modified after responsive links addded -->
+          <!-- Get username -->
+          <a class="nav-link" href="#user/froglover97">@froglover97</a>
+          <!-- For "current" addition on particular page: <span class="sr-only">(current)</span> -->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#login">login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">about rebbit</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            explore
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#following">your knots</a>
+            <a class="dropdown-item" href="#popular">popular knots</a>
+          </div>
+        </li>
+      </ul>
+      <!-- Search bar-->
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="hop on" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">search</button>
+      </form>
+    </div>
+  </nav>
+  
+  <!-- 1 column layout -->
+  <div class="container-fluid">
+    <!-- Get username -->
+    <p style="color:#4f676c;"><i>Hello, @froglover97</i></p>
+    <h1 style="padding-top: 1em; color:#4f676c;">Frog Mug</h1>
+    <h3 style="padding-bottom:.25em; color:#4f676c;">r/frog_kitchenware</h3>
+    <!-- <p class="top_desc">Hop to it partner. Also, the columns will automatically stack on top of each other when the screen is less than 768px wide.</p> -->
+    <div class="row">
+      <!-- Your Information -->
+      <div class="col-sm-12" style="background-color: #e7e4e4; padding: 1em; border-radius: 25px; ">
+        <!-- Flex -->
+        <div class="flex_post">
+            <img src="images/frog_kitchen.jpeg" alt="..." class="img-thumbnail main_image post_knot">
+            <div class="post post_info">
+                <!-- <p class="post_title">Frog Mug</p> -->
+                <p class="post_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum dui faucibus in ornare quam viverra. Cursus mattis molestie a iaculis at erat pellentesque. Aliquet nibh praesent tristique magna sit amet purus gravida quis.</p>
+                <p class="post_date">03-12-2020</p>
+            </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="row">
+    <!-- Your Information -->
+    <div class="col-sm-12" style="background-color: #e7e4e4; padding: 1em; border-radius: 25px; ">
+      <!-- Flex -->
+      <div class="flex_post">
+          <div class="post post_info">
+              <p class="post_title">@froglover97</p>
+              <p class="post_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum dui faucibus in ornare quam viverra. Cursus mattis molestie a iaculis at erat pellentesque. Aliquet nibh praesent tristique magna sit amet purus gravida quis.</p>
+              <p class="post_date">03-12-2020</p>
+
+              <div class="post_info reply" style="width: 100%; padding: 1%;">
+                <p class="post_title reply">@froglover97</p>
+                <p class="post_desc reply">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum dui faucibus in ornare quam viverra. Cursus mattis molestie a iaculis at erat pellentesque. Aliquet nibh praesent tristique magna sit amet purus gravida quis.</p>
+                <p class="post_date reply">03-12-2020</p>
+              </div>
+
+          </div>
+
+          <div class="post post_info">
+            <p class="post_title">@froglover97</p>
+            <p class="post_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum dui faucibus in ornare quam viverra. Cursus mattis molestie a iaculis at erat pellentesque. Aliquet nibh praesent tristique magna sit amet purus gravida quis.</p>
+            <p class="post_date">03-12-2020</p>
+        </div>
+
+        <div class="post post_info">
+            <p class="post_title">@froglover97</p>
+            <p class="post_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum dui faucibus in ornare quam viverra. Cursus mattis molestie a iaculis at erat pellentesque. Aliquet nibh praesent tristique magna sit amet purus gravida quis.</p>
+            <p class="post_date">03-12-2020</p>
+        </div>
+
+        <div class="post post_info">
+            <p class="post_title">@froglover97</p>
+            <p class="post_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum dui faucibus in ornare quam viverra. Cursus mattis molestie a iaculis at erat pellentesque. Aliquet nibh praesent tristique magna sit amet purus gravida quis.</p>
+            <p class="post_date">03-12-2020</p>
+        </div>
+    </div>
+
+  </div>
+
+</div>
+  
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="./bootstrap/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
