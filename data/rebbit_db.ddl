@@ -94,11 +94,11 @@ CREATE TABLE CommentVote(
 
 
 -- Users
-INSERT INTO User(user_name, password, email) VALUES ('unded_turtle', MD5('ilovefrogs'), 'kzlecha@gmail.com');
-INSERT INTO User(user_name, password, email) VALUES ('froglover97', MD5('ilovefrogs'), 'lauren.d.stclair@gmail.com');
+-- INSERT INTO User(user_name, password, email) VALUES ('unded_turtle', MD5('ilovefrogs'), 'kzlecha@gmail.com');
+-- INSERT INTO User(user_name, password, email) VALUES ('froglover97', MD5('ilovefrogs'), 'lauren.d.stclair@gmail.com');
 
 -- Site Admin
-INSERT INTO Admin VALUES(1);
-INSERT INTO Admin VALUES(2);
+-- INSERT INTO Admin VALUES(1);
+-- INSERT INTO Admin VALUES(2);
 
 

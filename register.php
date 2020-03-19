@@ -1,19 +1,19 @@
 <?php
-// Include config file
+// Configuration file 
 require_once "config.php";
  
-// Define variables and initialize with empty values
+// User name and password defined, left with empty variables 
 $user_name = $password = $confirm_password = "";
 $username_err = $password_err = $confirm_password_err = "";
  
-// Processing form data when form is submitted
+// When form is submitted process the data 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
-    // Validate username
+    // Username validation 
     if(empty(trim($_POST["user_name"]))){
-        $username_err = "Please enter a username.";
+        $username_err = "Please create a username. ";
     } else{
-        // Prepare a select statement
+        // Select statement of user_name
         $sql = "SELECT id FROM User WHERE user_name = ?";
         
         if($stmt = mysqli_prepare($link, $sql)){
@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             mysqli_stmt_bind_param($stmt, "s", $param_username);
             
             // Set parameters
-            $param_username = trim($_POST["username"]);
+            $param_username = trim($_POST["user_name"]);
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
@@ -29,9 +29,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 mysqli_stmt_store_result($stmt);
                 
                 if(mysqli_stmt_num_rows($stmt) == 1){
-                    $username_err = "This username is already taken.";
+                    $username_err = "Sorry, this username is already taken.";
                 } else{
-                    $username = trim($_POST["username"]);
+                    $username = trim($_POST["user_name"]);
                 }
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
@@ -42,12 +42,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     }
     
-    // Validate password
+   // Validate password
     if(empty(trim($_POST["password"]))){
-        $password_err = "Please enter a password.";     
-    } elseif(strlen(trim($_POST["password"])) < 6){
-        $password_err = "Password must have atleast 6 characters.";
-    } else{
+        // Cannot be left empty
+        $password_err = "Please enter a password.";   
+    } elseif(strlen(trim($_POST["password"])) < 8) {
+        // Password must be greater than 8 char
+        $password_err = "Password must have at least 8 characters.";
+    } elseif(!preg_match("#[0-9]+#", $password)){
+        // Password must contain at least one number
+        $password_err = "Your password must contain at least one number.";
+    } elseif(!preg_match("#[A-Z]+#", $password)){
+        // Password must contain one uppercase letter
+        $password_err = "Your password must contain one uppercase letter";
+    } else {
         $password = trim($_POST["password"]);
     }
     
@@ -55,9 +63,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty(trim($_POST["confirm_password"]))){
         $confirm_password_err = "Please confirm password.";     
     } else{
+        // Check if password matches 
         $confirm_password = trim($_POST["confirm_password"]);
         if(empty($password_err) && ($password != $confirm_password)){
-            $confirm_password_err = "Password did not match.";
+            $confirm_password_err = "Password does not match.";
         }
     }
     
