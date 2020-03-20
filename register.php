@@ -113,7 +113,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <style>
 
-.register{
+.form_rebbit{
     background-color: #4f676c;
     padding: 20px;
     overflow: auto;
@@ -131,7 +131,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     color:darkseagreen;
 }
 
-.site_link{
+.rebbit_link{
     color: darkseagreen;
 }
 
@@ -144,15 +144,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     color: #9eb9ab;
 }
 
-.site_link:hover{
+.rebbit_link:hover{
     color: #86e4aa;
 }
 
-
 </style>
 
-<body>
-    <body style="margin: 0.25em; background-color: #f1f0f0;">
+<body style="margin: 0.25em; background-color: #f1f0f0;">
         <!-- NAVIGATION BAR-->
         <nav style="background-color: #f1f0f0" class="navbar navbar-expand-lg navbar-light " >
             <a class="navbar-brand" href="index.html">
@@ -189,7 +187,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </nav>
 
     <!-- Sign Up Form -->
-    <div class="wrapper register" style="padding-top: 40px; padding: 20px;">
+    <div class="wrapper form_rebbit" style="padding-top: 40px; padding: 20px;">
         <h2>Sign Up</h2>
         <p>Please create a username and password to create an account.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -218,7 +216,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="submit" class="btn btn-primary submit_btn" value="Submit">
                 <input type="reset" class="btn btn-default reset_btn" value="Reset">
             </div>
-            <p>Already have an account? <a class="site_link" href="login.php">Login</a></p>
+            <p>Already have an account? <a class="rebbit_link" href="login.php">Login</a></p>
         </form>
     </div>    
 
